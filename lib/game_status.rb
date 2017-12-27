@@ -26,7 +26,7 @@ def board_full?(board)
     return true
   end
 end
-    
+
 def draw?(board_full)
   if board_full == true
     return true
