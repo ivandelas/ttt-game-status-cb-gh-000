@@ -16,8 +16,8 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  WIN_COMBINATIONS.select do |index|
-    if index.all? {|index| position_taken?(board, index) && (board[index] == "X" || board[index] == "O")}
+  WIN_COMBINATIONS.select do |combo|
+    if combo.all? {|index| position_taken?(board, index) && (board[index] == "X" || board[index] == "O")}
       return combo
     end
   end
