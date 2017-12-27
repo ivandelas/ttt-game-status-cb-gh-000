@@ -15,15 +15,8 @@ WIN_COMBINATIONS = [
   [0, 4, 8]
 ]
 
-#def won?(board)
-#  WIN_COMBINATIONS.any? {|array| array == true} && position_taken?(board, index) == true
-# end
-
 def won?(board)
-  WIN_COMBINATIONS.each do |array|
-    if array == true && position_taken?(board, index) == true
-      puts array
-      return true
-    end
-  end
+  WIN_COMBINATIONS.any? {|array| array == true} && position_taken?(board, index) == true
+  return true
 end
+
