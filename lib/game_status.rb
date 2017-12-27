@@ -17,5 +17,4 @@ WIN_COMBINATIONS = [
 
 def won?(board)
   WIN_COMBINATIONS.any? {|index| index == true}
-  puts index when true
 end
