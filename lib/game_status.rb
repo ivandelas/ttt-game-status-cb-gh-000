@@ -19,4 +19,3 @@ def won?(board)
   WIN_COMBINATIONS.any? {|array| array == true} && position_taken?(board, index) == true
   return true
 end
-
