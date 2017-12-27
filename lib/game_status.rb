@@ -14,3 +14,7 @@ WIN_COMBINATIONS = [
   [2, 4, 6],
   [0, 4, 8]
 ]
+
+def won?(board)
+  WIN_COMBINATIONS.any? {|index| index == true}
+end
