@@ -16,6 +16,19 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  WIN_COMBINATIONS.any? {|combination| combination == true}
+  if WIN_COMBINATIONS.any? {|combination| combination == true}
+    return true
+  end
+end
+
+def board_full?(board)
+  if board[index].all? && position_taken(board, index).all? && won?(board) == false
+    return true
+  end
+end
+    
+def draw?(board_full)
+  if board_full == true
     return true
 end
+  
