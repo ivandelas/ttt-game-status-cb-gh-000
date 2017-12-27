@@ -15,8 +15,10 @@ WIN_COMBINATIONS = [
   [0, 4, 8]
 ]
 
-
-
 def won?(board)
-  WIN_COMBINATIONS.select {|array| array == true}
+  WIN_COMBINATIONS.each do |combo|
+    if combo.any? {|index| position_taken?(board, index) && (board[index] == "X" || board[index] == "X")}
+      return combo
+    end
+  end
 end
