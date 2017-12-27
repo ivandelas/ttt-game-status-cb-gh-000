@@ -15,7 +15,8 @@ WIN_COMBINATIONS = [
   [0, 4, 8]
 ]
 
+
+
 def won?(board)
-  WIN_COMBINATIONS.any? {|array| array == true} && position_taken?(board, index) == true
-  return true
+  WIN_COMBINATIONS.select {|array| array == true}
 end
