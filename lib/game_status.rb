@@ -16,15 +16,11 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  WIN_COMBINATIONS.select do |combo|
+  WIN_COMBINATIONS.all do |combo|
     if combo.any? {|index| position_taken?(board, index) && (board[index] == "X" || board[index] == "O")}
       return combo
     end
   end
 end
 
-def full?(board)
-  if position_taken?(board, index.all? == true)
-    return true
-  end
-end
+
