@@ -16,7 +16,6 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  WIN_COMBINATIONS.find |[index] == true|
+  WIN_COMBINATIONS.any? {|combination| combination == true}
     return true
-  end
 end
